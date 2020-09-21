@@ -1,18 +1,29 @@
-import React from 'react'
+import React from "react";
+import "./Converter.css";
 
-const DecimalTo =({result1, result2, result3}) => {
-    // console.log(props)
-    return (
-        <div>
-          Jackson says hello
-          <p>Binary Result</p>
-          <div>{result1}</div>
-          <p>Octal Result</p>
-          <div>{result2}</div>
-          <p>Hexadecimal Result</p>
-          <div>{result3}</div>
-        </div>
-    )
+function DecimalTo(props) {
+  let value = props.value;
+  if (isNaN(parseInt(props.value))) {
+    value = 0;
+  }
+  console.log(value);
+
+  return (
+    <div className="binary">
+      <div className="result-value">
+        <h3> Binary Result : </h3> <h3> {parseInt(value).toString(2)}</h3>
+      </div>
+      <div className="result-value">
+        <h3> Octal Result : </h3> <h3> {parseInt(value).toString(8)}</h3>
+      </div>
+      <div className="result-value">
+        <h3> Decimal Result : </h3> <h3> {parseInt(value).toString(10)}</h3>
+      </div>
+      <div className="result-value">
+        <h3> HexaDecimal Result : </h3> <h3> {parseInt(value).toString(16)}</h3>
+      </div>
+    </div>
+  );
 }
 
-export default DecimalTo
+export default DecimalTo;
