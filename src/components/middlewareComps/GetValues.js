@@ -20,14 +20,21 @@ const GetValues =() => {
         
     }
 
-    const cond = state.choice === 'decimal'?
-    
-    <HexadecimalToFunctions value= {state.value} />:
-          state.choice === 'binary'?
-    <BinaryToFunctions value= {state.value} /> :
-          state.choice === 'octal'?
-    <OctalToFunctions value= {state.value} /> :
-    <DecimalToFunctions value= {state.value} /> 
+    let cond = ''
+    switch (state.choice) {
+        case "hexadecimal":
+            cond = <HexadecimalToFunctions value= {state.value} />
+            break;
+        case "binary":
+            cond = <BinaryToFunctions value= {state.value} />
+            break;
+        case "octal":
+            cond = <OctalToFunctions value= {state.value} />
+            break;
+        default:
+            cond = <DecimalToFunctions value= {state.value} /> 
+    }
+
     
     
 
