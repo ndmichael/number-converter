@@ -1,4 +1,5 @@
 .App {
+<<<<<<< HEAD
   text-align: center;
 }
 
@@ -35,4 +36,41 @@
   to {
     transform: rotate(360deg);
   }
+=======
+  display: flex;
+  flex-direction: column;
+}
+.App .heading {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+.icon {
+  height: 30px;
+  width: 40px;
+  margin-left: 20px;
+}
+
+.converter {
+  display: flex;
+  flex-direction: column;
+}
+.converter__result {
+  display: flex;
+  margin-top: 40px;
+}
+
+.converter__input {
+  display: flex;
+  margin-top: 80px;
+}
+.input-type {
+  margin-left: 20px;
+}
+
+.result-value {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+>>>>>>> 17f3e1881fb0d4c12a47281b8cfeefc0da887587
 }
