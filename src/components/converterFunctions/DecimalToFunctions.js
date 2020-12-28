@@ -6,19 +6,19 @@ function DecimalToFunctions({value}) {
     const DecToBinary = (decValue=0) =>{
         let value = parseInt(decValue)
         let result = (value).toString(2)
-        return result
+        return isNaN(result) ? 0: result
     }
 
     const DecToOctal = (decValue=0) =>{
         let value = parseInt(decValue)
         let result = (value).toString(8)
-        return result
+        return isNaN(result) ? 0: result
     }
 
     const DecToHexadecimal = (decValue=0) =>{
         let value = parseInt(decValue) 
         let result = (value).toString(16).toUpperCase()
-        return result
+        return isNaN(result) ? 0: result
     }
     
     let result1 = DecToBinary(value)

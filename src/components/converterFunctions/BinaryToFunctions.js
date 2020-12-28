@@ -3,19 +3,18 @@ import BinaryTo from '../DisplayResult/BinaryResults'
 
 
 const BinaryToFunctions =({value}) => {
-    console.log(value)
 
     const BinToDecimal = (binValue=0) =>{
         let result = parseInt(binValue, 2)
-        return result
+        return isNaN(result) ? 0: result
     }
     const BinToOctal = (binValue=0) =>{
         let result = parseInt(binValue, 2).toString(8)
-        return result
+        return isNaN(result) ? 0: result
     }
     const DecToHexadecimal = (binValue=0) =>{
         let result = parseInt(binValue, 2).toString(16)
-        return result
+        return isNaN(result) ? 0: result
     }
     let result1 = BinToDecimal(value)
     let result2 = BinToOctal(value)

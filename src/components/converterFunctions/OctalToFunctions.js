@@ -5,15 +5,15 @@ import OctalTo from '../DisplayResult/OctalResults'
 function OctalToFunctions({value}) {
     const OctalToDecimal = (octValue=0) =>{
         let result = parseInt(octValue, 8)
-        return result
+        return isNaN(result) ? 0: result
     }
     const OctalToBinary= (octValue=0) =>{
         let result = ("00000000" + parseInt(octValue, 8).toString(2)).substr(-8)
-        return result
+        return isNaN(result) ? 0: result
     }
     const OctalToHexadecimal = (octValue=0) =>{
         let result = parseInt(octValue, 8).toString(16).toUpperCase()
-        return result
+        return isNaN(result) ? 0: result
     }
     let result1 = OctalToDecimal(value)
     let result2 = OctalToBinary(value) 

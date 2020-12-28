@@ -4,20 +4,19 @@ import HexadecimalTo from '../DisplayResult/HexadecimalResults'
 
 function HexadecimalToFunctions({value}) {
     const HexToDecimal = (hexValue) =>{
-        // let value = parseInt(decValue) 
         let result = parseInt(hexValue, 16)
-        return result
+        return isNaN(result) ? 0: result
     }
 
     const HexToBinary = (hexValue) =>{
         let result = ("00000000" + parseInt(hexValue, 16).toString(2)).substr(-8)
-        return result
+        return isNaN(result) ? 0: result
     }
 
     const HexToOctal = (hexValue) =>{
 
         let result = parseInt(hexValue, 16).toString(8)
-        return result
+        return isNaN(result) ? 0: result
     }
 
     let result1 = HexToDecimal(value)
