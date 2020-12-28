@@ -1,21 +1,49 @@
 import React from 'react'
+import { TextField, Select, Button, Input, MenuItem, InputLabel, FormControl, Grid } from '@material-ui/core'
 
-function Form({submitHandler, choiceHandler, valueHandler, value}) {
+function Form({ submitHandler, choiceHandler, valueHandler, choice }) {
     return (
+
         <form onSubmit={submitHandler}>
-                <div>
-                    <label htmlFor="convertfrom">Convert From</label> <br />
-                    <select onChange={choiceHandler}>
-                        <option value="decimal">Whole Number</option>
-                        <option value="binary">Binary</option>
-                        <option value="hexadecimal">Hexadecimal</option>
-                        <option value="octal">Octal</option>
-                    </select>
-                    <input type="text" onChange={valueHandler} name="choice" placeholder={`enter an ${value} value`} />
-                </div>
-                <button type="submit">Submit</button>
+            <Grid container spacing={3} >
+                <Grid item xs={12} sm={12}  spacing={5}>
+                    <FormControl>
+                        <InputLabel htmlFor="convertfrom" id="label">Convert From</InputLabel> <br />
+                        <Select labelId="label" id="select" value="decimal" onChange={choiceHandler}>
+                            <MenuItem value="decimal">Whole Number</MenuItem>
+                            <MenuItem value="binary">Binary</MenuItem>
+                            <MenuItem value="hexadecimal">Hexadecimal</MenuItem>
+                            <MenuItem value="octal">Octal</MenuItem>
+                        </Select>
+                    </FormControl>
+                </Grid>
+
+                <Grid item xs={12} sm={12} spacing={5}>
+                    <FormControl>
+                        <TextField
+                            id="outlined-secondary"
+                            onChange={valueHandler}
+                            name="choice"
+                            label={`enter ${choice} value`}
+                            variant="outlined"
+                            color="primary"
+                        />
+                    </FormControl>
+                </Grid>
+
+
+
+
+                <Button type="submit" variant="contained" color="secondary">
+                    CONVERT
+        </Button>
+            </Grid>
         </form>
+
+
     )
 }
 
 export default Form
+
+

@@ -29,7 +29,7 @@ function Converter({formInput}) {
             <Form submitHandler={submitHandler} 
                 choiceHandler={choiceHandler} 
                 valueHandler={valueHandler}
-                value = {valueToConvert.choice}>
+                choice = {valueToConvert.choice}>
             </Form>
         </div>
     )
