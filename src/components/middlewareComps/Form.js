@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextField, Select, Button, Input, MenuItem, InputLabel, FormControl, Grid } from '@material-ui/core'
+import { TextField, Select, Button,  MenuItem, InputLabel, FormControl, Grid } from '@material-ui/core'
 
 function Form({ submitHandler, choiceHandler, valueHandler, choice }) {
     return (
