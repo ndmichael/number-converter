@@ -9,11 +9,7 @@ function Converter({formInput}) {
         setValueToConvert({...valueToConvert, choice: e.target.value})
     }
     const valueHandler = (e) =>{
-        if (e.target.value >= 0)
-            setValueToConvert({...valueToConvert, value: e.target.value})
-        else{
-            setValueToConvert({value: 0}) 
-        }
+        setValueToConvert({...valueToConvert, value: e.target.value})
     }
 
     const submitHandler = (e) =>{
