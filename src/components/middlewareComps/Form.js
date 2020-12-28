@@ -6,10 +6,10 @@ function Form({ submitHandler, choiceHandler, valueHandler, choice }) {
 
         <form onSubmit={submitHandler}>
             <Grid container spacing={3} >
-                <Grid item xs={12} sm={12}  spacing={5}>
+                <Grid item xs={12} sm={12}>
                     <FormControl>
                         <InputLabel htmlFor="convertfrom" id="label">Convert From</InputLabel> <br />
-                        <Select labelId="label" id="select" value="decimal" onChange={choiceHandler}>
+                        <Select labelId="label" id="select" value={choice} onChange={choiceHandler}>
                             <MenuItem value="decimal">Whole Number</MenuItem>
                             <MenuItem value="binary">Binary</MenuItem>
                             <MenuItem value="hexadecimal">Hexadecimal</MenuItem>
@@ -18,7 +18,7 @@ function Form({ submitHandler, choiceHandler, valueHandler, choice }) {
                     </FormControl>
                 </Grid>
 
-                <Grid item xs={12} sm={12} spacing={5}>
+                <Grid item xs={12} sm={12}>
                     <FormControl>
                         <TextField
                             id="outlined-secondary"
