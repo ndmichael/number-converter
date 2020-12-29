@@ -13,8 +13,9 @@ function OctalToFunctions({value}) {
     }
     const OctalToHexadecimal = (octValue=0) =>{
         let result = parseInt(octValue, 8).toString(16).toUpperCase()
-        return isNaN(result) ? 0: result
+        return result
     }
+
     let result1 = OctalToDecimal(value)
     let result2 = OctalToBinary(value) 
     let result3 = OctalToHexadecimal(value)
