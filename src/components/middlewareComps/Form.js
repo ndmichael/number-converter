@@ -1,25 +1,45 @@
 import React from 'react'
-import { TextField, Select, Button,  MenuItem, InputLabel, FormControl, Grid } from '@material-ui/core'
+import { TextField, Select, Button, MenuItem, Typography, FormControl, Grid, Box } from '@material-ui/core'
 
 function Form({ submitHandler, choiceHandler, valueHandler, choice }) {
     return (
 
         <form onSubmit={submitHandler}>
-            <Grid container spacing={3} >
-                <Grid item xs={12} sm={12}>
-                    <FormControl>
-                        <InputLabel htmlFor="convertfrom" id="label">Convert From</InputLabel> <br />
-                        <Select labelId="label" id="select" value={choice} onChange={choiceHandler}>
-                            <MenuItem value="decimal">Whole Number</MenuItem>
-                            <MenuItem value="binary">Binary</MenuItem>
-                            <MenuItem value="hexadecimal">Hexadecimal</MenuItem>
-                            <MenuItem value="octal">Octal</MenuItem>
+            <Grid container xs={7} fullWidth="true" spacing={3} >
+                <Grid item sm={12}>
+                    <Typography variant="h4">
+                        <b>Convert From... </b>
+                    </Typography>
+                </Grid>
+                <Grid item xs={12} sm={5} zeroMinWidth>
+                    <FormControl fullWidth="true">
+                        <Select labelId="label" id="select" value={choice} onChange={choiceHandler} >
+                            <MenuItem value="decimal">
+                                <Typography variant="h6" color="secondary">
+                                Decimal
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem value="binary">
+                                <Typography variant="h6" color="secondary">
+                                    Binary
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem value="hexadecimal">
+                                <Typography variant="h6" color="secondary">
+                                    Hexadecimal
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem value="octal">
+                                <Typography variant="h6" color="secondary">
+                                    Octal
+                                </Typography>
+                            </MenuItem>
                         </Select>
                     </FormControl>
                 </Grid>
 
-                <Grid item xs={12} sm={12}>
-                    <FormControl>
+                <Grid item xs={12} sm={7}>
+                    <FormControl fullWidth="true">
                         <TextField
                             id="outlined-secondary"
                             onChange={valueHandler}
@@ -31,12 +51,12 @@ function Form({ submitHandler, choiceHandler, valueHandler, choice }) {
                     </FormControl>
                 </Grid>
 
+                <Box ml={1}>
+                    <Button type="submit" variant="contained" color="secondary" size="large">
+                        CONVERT
+                    </Button>
+                </Box>
 
-
-
-                <Button type="submit" variant="contained" color="secondary">
-                    CONVERT
-        </Button>
             </Grid>
         </form>
 
