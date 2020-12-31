@@ -5,13 +5,13 @@ function Form({ submitHandler, choiceHandler, valueHandler, choice }) {
     return (
 
         <form onSubmit={submitHandler}>
-            <Grid container xs={7} fullWidth="true" spacing={3} >
+            <Grid container xs={12}  fullWidth="true" spacing={3} >
                 <Grid item sm={12}>
                     <Typography variant="h4">
                         <b>Convert From... </b>
                     </Typography>
                 </Grid>
-                <Grid item xs={12} sm={5} zeroMinWidth>
+                <Grid item xs={12} sm={5} >
                     <FormControl fullWidth="true">
                         <Select labelId="label" id="select" value={choice} onChange={choiceHandler} >
                             <MenuItem value="decimal">
