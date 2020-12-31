@@ -3,7 +3,7 @@ import { Box, Typography, Grid } from '@material-ui/core'
 
 const BinaryTo = ({ result1, result2, result3 }) => {
   return (
-    <Grid container xs={12} md={7} spacing={3}>
+    <Grid container xs={12} md={12}>
       <Grid item xs={12} sm={12}>
         <Typography variant="h6" >
           Result In Decimal
