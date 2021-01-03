@@ -9,7 +9,7 @@ const DecimalTo = ({ result1, result2, result3 }) => {
         <Typography variant="h6" >
           Result In Binary
         </Typography>
-        <Box color="text.primary" borderColor="grey.500" border={1}  marginBottom="15px" padding="10px">
+        <Box color="text.primary" style={{background: "whitesmoke"}}  marginBottom="15px" padding="10px">
           <Typography>
             {result1}
           </Typography>
@@ -20,7 +20,7 @@ const DecimalTo = ({ result1, result2, result3 }) => {
         <Typography variant="h6">
           Result in Octal
         </Typography>
-        <Box color="text.primary" borderColor="grey.500" border={1} marginBottom="15px" padding="10px">
+        <Box color="text.primary" style={{background: "whitesmoke"}} marginBottom="15px" padding="10px">
           <Typography>
             {result2}
           </Typography>
@@ -31,7 +31,7 @@ const DecimalTo = ({ result1, result2, result3 }) => {
         <Typography variant="h6" >
           Result in Hexadecimal
         </Typography>
-        <Box color="text.primary" borderColor="grey.500" border={1} marginBottom="15px" padding="10px">
+        <Box color="text.primary" style={{background: "whitesmoke"}} marginBottom="15px" padding="10px">
           <Typography >
             {result3}
           </Typography>
