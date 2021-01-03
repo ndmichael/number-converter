@@ -87,7 +87,7 @@ const GetValues = () => {
 
             <Grid container>
                 <Grid item xs={12}>
-                    <Box style={{ backgroundColor: "#dee2e6" }} p={2} align="center">
+                    <Box p={2} align="center">
                         <Typography variant="h6" color="textSecondary">
                             Designed with react and materialUI
                     </Typography>
