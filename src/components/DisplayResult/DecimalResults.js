@@ -4,7 +4,7 @@ import { Box, Typography, Grid } from '@material-ui/core'
 const DecimalTo = ({ result1, result2, result3 }) => {
   // console.log(props)
   return (
-    <Grid container xs={12} md={12}>
+    <Grid container  xs={12} md={12}>
       <Grid item xs={12} sm={12}>
         <Typography variant="h6" >
           Result In Binary
